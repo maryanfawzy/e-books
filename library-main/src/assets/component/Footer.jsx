@@ -12,12 +12,11 @@ import Logo from "../Library.svg"
                 </figure>
                 </a>
                 <div className="footer__list">
-                    <a href="" className='footer__link'>
+                    <a href="/" className='footer__link'>
                         Home
                     </a>
-                    <a href="" className='footer__link no-cursor'></a>
-                    <a href="" className='footer__link'>Books</a>
-                    <a href="" className='footer__link'>Cart</a>
+                    <a href="/books" className='footer__link'>Books</a>
+                    <a href="/cart" className='footer__link'>Cart</a>
 
                 </div>
                 <div className="footer__copyright">
