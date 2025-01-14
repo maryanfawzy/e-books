@@ -32,15 +32,16 @@ import { books } from '../assets/component/data';
                             </h2>
                             <Ratings rating={book.rating}/>
                             <div className="book__selected--price">
-                                <Price salePrice={books.salePrice} originalPrice={books.originalPrice}/>
+                                <Price salePrice={book.salePrice} originalPrice={book.originalPrice}/>
                             </div>
                             <div className="book__summary">
                                 <div className="book__summary--title">Summary</div>
                                 <p className="book__summary--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos incidunt adipisci officia ad ducimus aut deserunt architecto. Qui itaque quibusdam ullam error ab eaque a consectetur. Sequi unde eos reprehenderit.</p>
                             </div>
+                            <a href="/cart">
                             <button className='btn'>Add to the Cart
-
                             </button>
+                            </a>
                             </div>
                     </div>
                 </div>
