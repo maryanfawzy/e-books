@@ -11,38 +11,38 @@ import { useEffect, useState } from "react";
 import Cart from "./Pages/Cart";
 
 function App() {
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
 
-  function addToCart(book) {
-    setCart([...cart, { ...book, quantity: 1 }])
-  }
-  function changeQuantity(book, quantity) {
-    setCart(cart.map(item => item.id === book.id
-        ? {
-          ...item,
-          quantity: +quantity
-        }
-        : item
-    ))
-  }
+  // function addToCart(book) {
+  //   setCart([...cart, { ...book, quantity: 1 }])
+  // }
+  // function changeQuantity(book, quantity) {
+  //   setCart(cart.map(item => item.id === book.id
+  //       ? {
+  //         ...item,
+  //         quantity: +quantity
+  //       }
+  //       : item
+  //   ))
+  // }
 
-  function removeBook(item) {
-    setCart(cart.filter(book => book.id !== item.id))
-  }
+  // function removeBook(item) {
+  //   setCart(cart.filter(book => book.id !== item.id))
+  // }
 
-  function numberOfItems() {
-    let counter=0;
-    cart.forEach((item) => {
-      counter += item.quantity
-    })
-    return counter;
-  }
+  // function numberOfItems() {
+  //   let counter=0;
+  //   cart.forEach((item) => {
+  //     counter += item.quantity
+  //   })
+  //   return counter;
+  // }
 
-  useEffect(() => {
-    console.log(cart)
-  }, [cart])
+  // useEffect(() => {
+  //   console.log(cart)
+  // }, [cart])
 
-  return (
+  
     // <Router>
     //   <div className="App">
     //     <Nav />
@@ -67,6 +67,40 @@ function App() {
     //   <Routes/>
     // </Router>
 
+    const [cart, setCart] = useState([]);
+
+    function addToCart(book) {
+      setCart([...cart, { ...book, quantity: 1 }])
+    }
+    function changeQuantity(book, quantity) {
+      setCart(cart.map(item => item.id === book.id
+          ? {
+            ...item,
+            quantity: +quantity
+          }
+          : item
+      ))
+    }
+  
+    function removeBook(item) {
+      setCart(cart.filter(book => book.id !== item.id))
+    }
+  
+    function numberOfItems() {
+      let counter=0;
+      cart.forEach((item) => {
+        counter += item.quantity
+      })
+      return counter;
+    }
+  
+    useEffect(() => {
+      console.log(cart)
+    }, [cart])
+
+    
+    
+return(
     <Router>
     <div className="App">
       <Nav />
